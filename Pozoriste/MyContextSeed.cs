@@ -17,12 +17,12 @@ namespace Pozoriste
 
             modelBuilder.Entity<Admin>().HasData
             (
-                new Admin{AdminID = 1,Ime = "Admin",Prezime = "Admin",KorisnickiNalogID = 1}
+                new Admin { AdminID = 1, Ime = "Admin", Prezime = "Admin", KorisnickiNalogID = 1 }
                 );
 
             modelBuilder.Entity<Kupac>().HasData(
 
-                new Kupac { KupacID = 1,Ime = "Ime1",Prezime = "Prezime1",BrojTelefona = "061111111",  GradID = 2, Email = "prezime1.ime1@gmail.com",KorisnickiNalogID = 2  },
+                new Kupac { KupacID = 1, Ime = "Ime1", Prezime = "Prezime1", BrojTelefona = "061111111", GradID = 2, Email = "prezime1.ime1@gmail.com", KorisnickiNalogID = 2 },
                 new Kupac { KupacID = 2, Ime = "Ime2", Prezime = "Prezime2", BrojTelefona = "061222111", GradID = 3, Email = "prezime2.ime2@gmail.com", KorisnickiNalogID = 2 },
                 new Kupac { KupacID = 3, Ime = "Ime3", Prezime = "Prezime3", BrojTelefona = "061223331", GradID = 4, Email = "prezime3.ime4@gmail.com", KorisnickiNalogID = 2 },
                 new Kupac { KupacID = 4, Ime = "Ime4", Prezime = "Prezime4", BrojTelefona = "061222331", GradID = 8, Email = "prezime4.ime4@gmail.com", KorisnickiNalogID = 2 }
@@ -75,7 +75,27 @@ namespace Pozoriste
        new Glumac { GlumacID = 6, Ime = "Goran", Prezime = "Lazo", BrojUgovora = "9933", Email = "goran@gmail.com" },
        new Glumac { GlumacID = 7, Ime = "Vedran", Prezime = "Vedran", BrojUgovora = "4567", Email = "vedran@gmail.com" });
 
+            modelBuilder.Entity<Predstava>().HasData(
+                  new Predstava
+                  {
+                      PredstavaID = 8,
+                      Naziv = "dervis i smrt",
+                      Opis = "Opis",
+                      Reziser = "Reziser",
+                      Trajanje = 60,
+                      ZanrID = 2
+                  }
 
+
+                );
+            modelBuilder.Entity<Komentar>().HasData(
+      new Komentar { KomentarID = 1, Sadrzaj = "Super", KupacID = 2, PredstavaID = 1002, Odobren = true, VrijemeKreiranja = DateTime.Now },
+      new Komentar { KomentarID = 2, Sadrzaj = "Lose", KupacID = 3, PredstavaID = 8, Odobren = true, VrijemeKreiranja = DateTime.Now }
+   );
         }
+
+
+
+
     }
 }
