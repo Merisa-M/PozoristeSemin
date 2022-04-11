@@ -274,26 +274,6 @@ namespace Pozoriste.Migrations
                     b.HasIndex("PredstavaID");
 
                     b.ToTable("Komentar");
-
-                    b.HasData(
-                        new
-                        {
-                            KomentarID = 1,
-                            KupacID = 2,
-                            Odobren = true,
-                            PredstavaID = 1,
-                            Sadrzaj = "Super",
-                            VrijemeKreiranja = new DateTime(2022, 4, 11, 17, 2, 2, 127, DateTimeKind.Local).AddTicks(3835)
-                        },
-                        new
-                        {
-                            KomentarID = 2,
-                            KupacID = 3,
-                            Odobren = true,
-                            PredstavaID = 1,
-                            Sadrzaj = "Lose",
-                            VrijemeKreiranja = new DateTime(2022, 4, 11, 17, 2, 2, 129, DateTimeKind.Local).AddTicks(8864)
-                        });
                 });
 
             modelBuilder.Entity("Pozoriste.EntityModels.KorisnickiNalog", b =>
@@ -469,18 +449,6 @@ namespace Pozoriste.Migrations
                     b.HasIndex("ZanrID");
 
                     b.ToTable("Predstava");
-
-                    b.HasData(
-                        new
-                        {
-                            PredstavaID = 1,
-                            Naziv = "dervis i smrt",
-                            Opis = "Opis",
-                            ProsjecnaOcjena = 0m,
-                            Reziser = "Reziser",
-                            Trajanje = 60,
-                            ZanrID = 2
-                        });
                 });
 
             modelBuilder.Entity("Pozoriste.EntityModels.PredstavaKupac", b =>
