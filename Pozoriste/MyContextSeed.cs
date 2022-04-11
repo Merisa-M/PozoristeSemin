@@ -84,18 +84,10 @@ namespace Pozoriste
                       Reziser = "Reziser",
                       Trajanje = 60,
                       ZanrID = 2
-                  }
-
-
-                );
+                  });
             modelBuilder.Entity<Komentar>().HasData(
       new Komentar { KomentarID = 1, Sadrzaj = "Super", KupacID = 2, PredstavaID = 1002, Odobren = true, VrijemeKreiranja = DateTime.Now },
-      new Komentar { KomentarID = 2, Sadrzaj = "Lose", KupacID = 3, PredstavaID = 8, Odobren = true, VrijemeKreiranja = DateTime.Now }
-   );
+      new Komentar { KomentarID = 2, Sadrzaj = "Lose", KupacID = 3, PredstavaID = 8, Odobren = true, VrijemeKreiranja = DateTime.Now });
         }
-
-
-
-
     }
 }
